@@ -6,6 +6,7 @@ from database import create_db, add_lead, get_all_leads
 
 app = FastAPI()
 
+#instantiates leads table
 create_db()
 
 @app.post("/login")
@@ -38,9 +39,6 @@ async def leads():
         map[i[0]] = {"first_name", i[1], 
                      "last_name", i[2], 
                      "email", i[3]}
-        
-        
-        
     return {
         "leads": map
     }
