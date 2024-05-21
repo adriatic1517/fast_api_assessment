@@ -1,6 +1,6 @@
 Install Docker.
 
-Run postgres with `docker compose up -d`
+Run postgres with `docker compose up -d`. This will start a postgres container and expose it on `localhost:5432`.
 
 Activate virtual env `source env/bin/activate`, `pip install -r requirements.txt` and run with `fastapi dev main.py`
 
