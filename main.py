@@ -1,8 +1,8 @@
 from fastapi.staticfiles import StaticFiles
 from typing import Annotated
 from fastapi import FastAPI, Form, File, UploadFile
-from mail import send_mail
-from database import create_db, add_lead, get_all_leads
+from mail.mail import send_mail
+from db.database import create_db, add_lead, get_all_leads
 
 app = FastAPI()
 

@@ -8,7 +8,7 @@ from email import encoders
 
 import yaml 
 
-with open('config.yml', 'r') as file:
+with open('config/config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
 
