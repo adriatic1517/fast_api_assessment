@@ -1,0 +1,8 @@
+email: "emadalma40@gmail.com"
+email_password: "tomwxajemuejupzb"
+
+pg:
+  host: "127.0.0.1"
+  dbname: "postgres"
+  user: "postgres"
+  pwd: "postgres"

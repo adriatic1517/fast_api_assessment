@@ -33,14 +33,15 @@ async def login(firstname: Annotated[str, Form()],
 
 @app.get("/leads")
 async def leads():
-    leads = get_all_leads()
-    map = {}
-    for i in leads:
-        map[i[0]] = {"first_name", i[1], 
-                     "last_name", i[2], 
-                     "email", i[3]}
+    objects = get_all_leads()
+    leads = []
+    for i in objects:
+        leads.append({"id": i[0],
+                    "first_name": i[1], 
+                     "last_name": i[2], 
+                     "email": i[3]})
     return {
-        "leads": map
+        "leads": leads
     }
 
 app.mount("/", StaticFiles(directory="static",html = True), name="static")

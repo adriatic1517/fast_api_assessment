@@ -6,6 +6,11 @@ from email.mime.text import MIMEText
 from email.utils import COMMASPACE, formatdate
 from email import encoders
 
+import yaml 
+
+with open('config.yml', 'r') as file:
+    config = yaml.safe_load(file)
+
 
 def send_mail(send_from, send_to, subject, message, files=[],
               server="smtp.gmail.com", port=587, username='emadalma40@gmail.com', password='tomwxajemuejupzb',
@@ -32,8 +37,6 @@ def send_mail(send_from, send_to, subject, message, files=[],
     msg['Date'] = formatdate(localtime=True)
     msg['Subject'] = subject
     
-    print(msg['To'])
-
     msg.attach(MIMEText(message))
 
 

@@ -1,3 +1,5 @@
+## How to run
+
 Install Docker.
 
 Run postgres with `docker compose up -d`. This will start a postgres container and expose it on `localhost:5432`.
